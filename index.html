@@ -6,45 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
 
-    <style>
-        .winner {
-            color : green;
-        }
-
-        .loser {
-            color : red;
-        }
-    </style>
-
+    <!-- Bulma CSS framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 </head>
+
 <body>
-    <h3>Ping Pong score Keeper</h3>
+    <section class = "section">
+        <div class = "container">
+            <div class = "columns">
+                <div class = "column is-half is-offset-one-quarter">
+                    <div class="card">
 
-    <h1><span id = 'P1'>0</span> to <span id = 'P2'>0</span></h1>
+                        <!-- Image -->
+                        <div class = "card-image">
+                            <figure class = "image is-2by1">
+                                <img src = "https://images.unsplash.com/photo-1576617497557-22895ee5930b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGluZyUyMHBvbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80">
+                            </figure>
+                        </div>
 
-    <p>Use the buttons below to keep score</p>
+                        <!-- Header -->
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper
+                            </p>
+                        </header>
 
-    <select>
-        <label>Playing To:</label>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-    </select>
+                        <!-- Content -->
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class = "title is-1"><span id = 'P1'>0</span> to <span id = 'P2'>0</span></h1>
+                                <p class = "subtitle">Use the buttons below to keep score</p>
 
-    <br>
-    <br>
+                                <label for = "playto" class = "label is-large is-inline">Playing To</label>
+                                <div class = "select is-rounded">
+                                    <select id = "playto">
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                    </select>                        
+                                </div>
+                            </div>
+                        </div>
 
-    <button id = "btn1">+1 Player One</button>
-    <button id = "btn2">+1 Player Two</button>
-    <button id = 'reset'>Reset</button>
-
+                        <!-- Buttons -->
+                        <footer class="card-footer">
+                            <button id = "btn1" class = "is-primary button card-footer-item is-large">+1 Player One</button>
+                            <button id = "btn2" class = "is-info button card-footer-item is-large">+1 Player Two</button>
+                            <button id = "reset" class = "is-danger button card-footer-item is-large">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- JS file -->
     <script src = 'app.js'></script>
 </body>
 </html>
